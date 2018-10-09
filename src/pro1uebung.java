@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class pro1uebung {
     public static void main(String[] args) {
         System.out.println("hello world");
-        blatt2Aufgabe2();
+        blatt2Aufgabe3();
     }
 
     public static void blattAufgabe1() {
@@ -62,4 +62,22 @@ public class pro1uebung {
         }
      }
 
+    public static void blatt2Aufgabe3() {
+        Scanner sc = new Scanner(System.in);
+         System.out.println("Zahl eingeben");
+         int n = sc.nextInt();
+
+         for(int i = 1;  i <=n; i=i+2) {
+             System.out.println(i);
+         }
+         for(int i = 2; i <=n; i++) {
+             System.out.println(i*i);
+         }
+         for(int i = 1; i <=n; i++) {
+             System.out.println(i*13);
+         }
+         for(int i = n; i >=0; i--) {
+             System.out.println(i);
+         }
+     }
 }
