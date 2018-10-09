@@ -3,10 +3,14 @@ import java.util.Scanner;
 public class pro1uebung {
     public static void main(String[] args) {
         System.out.println("hello world");
-        blatt2Aufgabe3();
+        //blatt1Aufgabe1();
+       // blatt2Aufgabe1();
+       // blatt2Aufgabe2();
+       // blatt2Aufgabe3();
+        blatt3Aufgabe1();
     }
 
-    public static void blattAufgabe1() {
+    public static void blatt1Aufgabe1() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Zahl eingeben");
         int eingeleseneZahl = sc.nextInt();
@@ -67,17 +71,37 @@ public class pro1uebung {
          System.out.println("Zahl eingeben");
          int n = sc.nextInt();
 
-         for(int i = 1;  i <=n; i=i+2) {
+        System.out.println("ungerade zahlen");
+         for(int i = 1;  i <=n*2; i=i+2) {
              System.out.println(i);
          }
-         for(int i = 2; i <=n; i++) {
-             System.out.println(i*i);
-         }
-         for(int i = 1; i <=n; i++) {
-             System.out.println(i*13);
-         }
-         for(int i = n; i >=0; i--) {
+        System.out.println("gerade quadratzahlen");
+        for(int i = 1; i <= n; i++) {
+            System.out.println(i*i);
+        }
+        System.out.println("zahlen durch 13");
+        for(int i = 1; i <=n; i++) {
+            System.out.println(i*13);
+        }
+        System.out.println("postivie rueackwearts");
+        for(int i = n; i >=1; i--) {
              System.out.println(i);
          }
+     }
+
+     public static void blatt3Aufgabe1() {
+        Scanner sc = new Scanner(System.in);
+         System.out.println("Bitte String eingeben");
+         String str = sc.nextLine();
+         str = str.replace("a", " ");
+         str = str.replace("e", " ");
+         str = str.replace("i", " ");
+         str = str.replace("o", " ");
+         str = str.replace("u", " ");
+         System.out.println(str);
+     }
+
+     public static void blatt3Aufagbe2() {
+
      }
 }
