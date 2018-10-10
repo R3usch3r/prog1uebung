@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class pro1uebung {
@@ -7,7 +10,12 @@ public class pro1uebung {
        // blatt2Aufgabe1();
        // blatt2Aufgabe2();
        // blatt2Aufgabe3();
-        blatt3Aufgabe1();
+        //blatt3Aufgabe1();
+        try {
+            java2Aufgabe1();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void blatt1Aufgabe1() {
@@ -101,7 +109,18 @@ public class pro1uebung {
          System.out.println(str);
      }
 
-     public static void blatt3Aufagbe2() {
+     public static void java2Aufgabe1() throws IOException {
+         FileReader fr = new FileReader("C:\\Users\\JulianReuscher\\Desktop\\einpaarzahlen.txt");
+         BufferedReader br = new BufferedReader(fr);
+         String str;
+         int summe = 0;
+         int zahl;
 
+         while (null != (str = br.readLine())) {
+             zahl = Integer.parseInt(str);
+             summe=+zahl;
+         }
+         System.out.println(summe);
+         br.close();
      }
 }
